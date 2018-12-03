@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Fake User Generator</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="languages">
+        <item>English</item>
+        <item>Русский</item>
+    </string-array>
+
+
+
+    <string-array name="ages">
+        <item>Любой</item>
+        <item>20-29 лет</item>
+        <item>30-39 лет</item>
+        <item>40-49 лет</item>
+    </string-array>
+
+    <string name="russia">Россия</string>
+    <string name="usa">США</string>
+    <string name="uk">Великобритания</string>
+    <string name="germany">Германия</string>
+    <string name="france">Франция</string>
+
+    <string name="notsaved">НЕТ СОХРАНЁННЫХ</string>
+
+    <string name="Privacy">политика конфиденциальности</string>
+
+    <string name="male">Generator</string>
+    <string name="female">Generator</string>
+
+    <string name="firstName">Имя</string>
+    <string name="lastName">Фамилия</string>
+    <string name="secondName">Отчество</string>
+    <string name="name">Имя</string>
+    <string name="age">Возраст</string>
+    <string name="birthDay">Дата рождения</string>
+    <string name="nationality">Гражданство</string>
+    <string name="subject">Субъект</string>
+    <string name="city">Город</string>
+    <string name="address">Адрес проживания</string>
+    <string name="postcode">Почтовый индекс</string>
+    <string name="phoneNumber">Номер телефона</string>
+    <string name="email">Регистрация</string>
+    <string name="username">Логин</string>
+    <string name="addressMail">Адрес эл. почты</string>
+    <string name="password">Пароль</string>
+    <string name="cardNumber">Номер карты</string>
+    <string name="expirationDate">Срок действия</string>
+
+    <string name="copyA">скопирована!</string>
+    <string name="copy">скопирован!</string>
+    <string name="copyO">скопировано!</string>
+    <string name="copyI">скопированы!</string>
+
+    <string name="county">Графство</string>
+    <string name="countyScotland">Округ</string>
+
+    <string name="state">Земля</string>
+
+    <string name="firstName2">Имя</string>
+    <string name="city2">Город и почтовый индекс</string>
+    <string name="cityFrance">Коммунa и почтовый индекс</string>
+
+    <string name="savedUsers">Сохранённые</string>
+    <string name="savedUsersCaps">СОХРАНЁННЫЕ</string>
+
+
+    <string name="likeit">Понравилось?</string>
+    <string name="no">НЕТ:(</string>
+    <string name="giveRate">Оставить отзыв♥</string>
+
+    <string name="Settings">Настройки</string>
+    <string name="Language">Язык</string>
+    <string name="Russian">Русский</string>
+    <string name="English">English</string>
+
+    <string name="contact">Написать разработчику</string>
+
+    <string name="add">Реклама</string>
+
+    <string name="randomUserRu">Фотография была взята с сайта randomuser.ru</string>
+
+    <string name="noConnection">Нет подключения к интернету!</string>
+
+    <string name="supportMe">Поддержи разработчика!</string>
+    <string name="supportMe2">Преимущества PRO-версии:</string>
+    <string name="supportMe3">—Отсутствие рекламы</string>
+    <string name="supportMe4">—Возможность сохранять пользователей</string>
+    <string name="support">Поддержать!♥♥♥</string>
+    <string name="supportButton">Поддержать разработчика</string>
+
+
+
+</resources>

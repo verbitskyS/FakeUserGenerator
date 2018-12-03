@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fake User Generator</string>
+
+    <string-array name="languages">
+        <item>English</item>
+        <item>Русский</item>
+    </string-array>
+
+
+    <string-array name="ages">
+        <item>Any age</item>
+        <item>20-29 y. o.</item>
+        <item>30-39 y. o.</item>
+        <item>40-49 y. o.</item>
+    </string-array>
+
+
+    <string name="russia">Russia</string>
+    <string name="usa">United States</string>
+    <string name="uk">United Kingdom</string>
+    <string name="germany">Germany</string>
+    <string name="france">France</string>
+
+    <string name="notsaved">NO SAVED USERS</string>
+
+    <string name="Privacy">Privacy policy</string>
+
+
+    <string name="male">Generator</string>
+    <string name="female">Generator</string>
+
+    <string name="firstName">First name</string>
+    <string name="lastName">Last name</string>
+    <string name="secondName">Father name</string>
+    <string name="name">Name</string>
+    <string name="birthDay">Birthday</string>
+    <string name="age">Age</string>
+    <string name="nationality">Nationality</string>
+    <string name="subject">Subject</string>
+    <string name="city">City</string>
+    <string name="address">Residential address</string>
+    <string name="postcode">Postal code</string>
+    <string name="phoneNumber">Phone number</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="addressMail">Email address</string>
+    <string name="password">Password</string>
+    <string name="cardNumber">Card number</string>
+    <string name="expirationDate">Expiration date</string>
+
+    <string name="copyA">has copied!</string>
+    <string name="copy">has copied!</string>
+    <string name="copyO">has copied!</string>
+    <string name="copyI">has copied!</string>
+
+    <string name="county">County</string>
+    <string name="countyScotland">Council area</string>
+
+    <string name="state">State</string>
+
+    <string name="firstName2">Name</string>
+    <string name="city2">City and postal code</string>
+    <string name="cityFrance">Commune and postal code</string>
+
+    <string name="savedUsers">Saved users</string>
+    <string name="savedUsersCaps">SAVED USERS</string>
+
+    <string name="likeit">You like it?</string>
+    <string name="no">NO:(</string>
+    <string name="giveRate">Give the rating♥</string>
+
+    <string name="Settings">Settings</string>
+    <string name="Language">Language</string>
+    <string name="Russian">Русский</string>
+    <string name="English">English</string>
+
+    <string name="contact">Contact developer</string>
+
+    <string name="add">Advertising</string>
+
+    <string name="randomUserRu">Photo was provided by randomuser.ru</string>
+
+
+    <string name="noConnection">No connection!</string>
+
+    <string name="supportMe">Support the developer!</string>
+    <string name="supportMe2">Advantages of the PRO-version:</string>
+    <string name="supportMe3">—No advertising</string>
+    <string name="supportMe4">—Ability to save users</string>
+    <string name="support">Support!♥♥♥</string>
+    <string name="supportButton">Support the developer</string>
+
+
+</resources>
