@@ -149,35 +149,12 @@ public class MaturalData {
 
 
 
-    /**
-     * Алгоритм ЛУНА для проверки корректности номера карты
-     * @param digits - номер карты (массив из 16 элементов)
-     * @return Возвращает 0, если номер корректен
-     */
 
 
-
-    public int check(int[] digits) {
-        int sum = 0;
-        int length = digits.length;
-        for (int i = 0; i < length; i++) {
-
-            // get digits in reverse order
-            int digit = digits[length - i - 1];
-
-            // every 2nd number multiply with 2
-            if (i % 2 == 1) {
-                digit *= 2;
-            }
-            sum += digit > 9 ? digit - 9 : digit;
-        }
-        return sum%10;
-    }
 
     /**
      * Генерация номера карты
      * Первые 15 цифр случайные, а последняя подбирается так, чтобы работал алгоритм ЛУНА
-     * @see MaturalData#check(int[])
      * @return Возвращает номер карты (ставится пробел после каждой 4 цифры)
      */
 
@@ -190,8 +167,8 @@ public class MaturalData {
         String card2 = String.valueOf((long) (Math.random() * 8999+1000));
         String card3 = String.valueOf((long) (Math.random() * 8999+1000));
         String card4 = String.valueOf((long) (Math.random() * 899+100));
-        card = card1 + card2 + card3 + card4;
-        char[] charArray = card.toCharArray();
+        card = "";
+        char[] charArray = (card1 + card2 + card3 + card4).toCharArray();
 
         digits[0] = 4;
 
@@ -202,13 +179,22 @@ public class MaturalData {
         }
 
 
-        for(int k=0; k<10; k++){
-            digits[15] = k;
-            if(check(digits)==0){
-                card = "";
-                break;
+        int sum = 0;
+        int digit;
+        for(int i = 0; i<15; i++) {
+            digit = digits[14-i];
+            if ((i+1)%2 != 0) {
+                digit *=2;
+                if (digit > 9) {
+                    digit -= 9;
+
+                }
             }
+            sum += digit;
         }
+
+        sum = 10 - (sum%10);
+        digits[15] = sum == 10 ? 0 : sum;
 
 
         for(int k=0; k<15; k++) {
