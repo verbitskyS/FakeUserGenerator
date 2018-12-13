@@ -199,9 +199,9 @@ public class MaturalData {
 
         for(int k=0; k<15; k++) {
             if((k+1)%4==0){
-                card = card+String.valueOf(digits[k])+" ";
+                card +=String.valueOf(digits[k])+" ";
             }else{
-                card = card+String.valueOf(digits[k]);
+                card +=String.valueOf(digits[k]);
             }
 
         }
