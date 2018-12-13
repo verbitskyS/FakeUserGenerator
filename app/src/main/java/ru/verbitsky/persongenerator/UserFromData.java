@@ -15,7 +15,6 @@ public class UserFromData extends Data{
 
     ContentValues cv;
     SQLiteDatabase db;
-    int position;
     Cursor cursor;
     DBHelper dbHelper;
 
@@ -23,7 +22,7 @@ public class UserFromData extends Data{
 
 
 
-    int idColIndex, idStolbcaColIndex, nameColIndex, firstnameColIndex, lastnameColIndex, fathernameColIndex, nomerPhotoColIndex, birthdayColIndex, subjectColIndex, countryColIndex,
+    int idColIndex, nameColIndex, firstnameColIndex, lastnameColIndex, fathernameColIndex, nomerPhotoColIndex, birthdayColIndex, subjectColIndex, countryColIndex,
             cityColIndex, addressColIndex, postcodeColIndex, numberPhoneColIndex, loginColIndex, emailColIndex, passwordColIndex, cardColIndex, cvc2ColIndex, cardDateColIndex,
             firstnameEngColIndex, lastnameEngColIndex, fathernameEngColIndex,subjectEngColIndex, cityEngColIndex, addressEngColIndex, countryNomerColIndex;
 
@@ -38,21 +37,16 @@ public class UserFromData extends Data{
     }
 
 
-    public void downloadUser(int position){
+    public void downloadUser(int idStolbca){
 
         Log.d("MainActivity", "Мы перешли в эту активити через активити 'сохраненные пользователи', получаем данные из базы данных");
 
 
         try {
 
-            cursor = db.query("mytable", null, null, null, null, null, null);
-
-            ////ЕСЛИ POSITION = -1 ТО РАНДОМ, ЕСЛИ НЕТ ТО ЭТО НОМЕР СОХРАНЕННОГО ПОЛЬЗОВАТЕЛЯ
-
-
-            cursor.moveToPosition(position);
+            cursor = db.query("mytable", null, "idStolbca = ?", new String[]{String.valueOf(idStolbca)}, null, null, null);
+            cursor.moveToFirst();
             idColIndex = cursor.getColumnIndex("id");
-            idStolbcaColIndex = cursor.getColumnIndex("idStolbca");
             countryNomerColIndex = cursor.getColumnIndex("countryNomer");
             nameColIndex = cursor.getColumnIndex("name");
             firstnameColIndex = cursor.getColumnIndex("firstName");
@@ -78,12 +72,6 @@ public class UserFromData extends Data{
             cardColIndex = cursor.getColumnIndex("card");
             cvc2ColIndex = cursor.getColumnIndex("cvc2");
             cardDateColIndex = cursor.getColumnIndex("cardDate");
-
-            idStolbca = cursor.getString(idStolbcaColIndex);
-        /*} else {
-            Log.d("MainActivity", "Генерируем случайного пользователя");
-
-        }*/
 
 
             CountryNomer = cursor.getString(countryNomerColIndex);
@@ -187,8 +175,6 @@ public class UserFromData extends Data{
 
 
     public void saveUser(){
-
-
 
 
         Log.d("База данных", "Сохраянем нового польхователя");

@@ -90,6 +90,7 @@ public class SavedPersons extends AppCompatActivity {
 
         // ставим позицию курсора на первую строку выборки
         // если в выборке нет строк, вернется false
+
         cursor.moveToFirst();
         if (cursor.moveToFirst()) {
 
@@ -263,7 +264,7 @@ public class SavedPersons extends AppCompatActivity {
                 Intent intent = new Intent(SavedPersons.this, MainActivity.class);
                 intent.putExtra("sex", sex);
                 intent.putExtra("countryNomer", country);
-                intent.putExtra("position", String.valueOf(position));
+                intent.putExtra("idStolbca", String.valueOf(idStolbca));
                 finish();
                 startActivity(getIntent());
                 startActivity(intent);

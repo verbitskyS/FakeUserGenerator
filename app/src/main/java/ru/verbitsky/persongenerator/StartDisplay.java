@@ -261,20 +261,17 @@ public class StartDisplay extends AppCompatActivity implements View.OnClickListe
                 Intent intent = new Intent(StartDisplay.this, MainActivity.class);
                 intent.putExtra("sex", "male");
                 intent.putExtra("countryNomer", String.valueOf(country));
-                intent.putExtra("position", "-1");
+                intent.putExtra("idStolbca", "-1");
                 startActivity(intent);
 
                 break;
             case R.id.button2:
                 amountOfEntries++;
 
-
-
-
                 Intent intent2 = new Intent(StartDisplay.this, MainActivity.class);
                 intent2.putExtra("sex", "female");
                 intent2.putExtra("countryNomer", String.valueOf(country));
-                intent2.putExtra("position", "-1");
+                intent2.putExtra("idStolbca", "-1");
                 startActivity(intent2);
                 break;
 

@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     DBHelper dbHelper;
-    int position;
+    int idStolbca;
 
     CustomDialogClass dialogRating;
 
@@ -248,7 +248,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = getIntent();
         sex = intent.getStringExtra("sex");
         CountryNomer = intent.getStringExtra("countryNomer");
-        position = Integer.parseInt(intent.getStringExtra("position"));
+        idStolbca = Integer.parseInt(intent.getStringExtra("idStolbca"));
 
 
         try {
@@ -302,12 +302,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     User = new RandomUser(CountryNomer, sex);
                     dataUser = new UserFromData(dbHelper, User);
 
-                    if(position==-1) {
+                    if(idStolbca==-1) {
 
                         User.startRandom();
 
                     }else{
-                        dataUser.downloadUser(position);
+                        dataUser.downloadUser(idStolbca);
 
                     }
 
@@ -371,7 +371,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 User = new RandomUser(CountryNomer, sex);
                 dataUser = new UserFromData(dbHelper, User);
 
-                if (position == -1) {
+                if (idStolbca == -1) {
 
 
                     User.startRandom();
@@ -379,7 +379,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } else {
 
 
-                    dataUser.downloadUser(position);
+                    dataUser.downloadUser(idStolbca);
                 }
 
             }
@@ -444,7 +444,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             });
 
-            if (position != -1) {
+            if (idStolbca != -1) {
                 flagSave = 1;
                 btSave.setImageDrawable((getResources().getDrawable(R.drawable.ic_delete_forever_black_24dp)));
             }
